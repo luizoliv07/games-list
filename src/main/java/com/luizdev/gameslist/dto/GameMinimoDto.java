@@ -1,7 +1,7 @@
 package com.luizdev.gameslist.dto;
 
 
-import com.luizdev.gameslist.entities.Games;
+import com.luizdev.gameslist.entities.Game;
 
 public class GameMinimoDto {
 
@@ -14,7 +14,7 @@ public class GameMinimoDto {
     public GameMinimoDto() {
     }
 
-    public GameMinimoDto(Games entity) {
+    public GameMinimoDto(Game entity) {
         id = entity.getId();
         shortDescription = entity.getShortDescription();
         imgUrl = entity.getImgUrl();
