@@ -2,6 +2,7 @@ package com.luizdev.gameslist.dto;
 
 
 import com.luizdev.gameslist.entities.Game;
+import com.luizdev.gameslist.projections.GameMinimoProjection;
 
 public class GameMinimoDto {
 
@@ -20,6 +21,14 @@ public class GameMinimoDto {
         imgUrl = entity.getImgUrl();
         year = entity.getYear();
         title = entity.getTitle();
+    }
+
+    public GameMinimoDto(GameMinimoProjection projection) {
+        id = projection.getId();
+        shortDescription = projection.getShortDescription();
+        imgUrl = projection.getImgUrl();
+        year = projection.getYear();
+        title = projection.getTitle();
     }
 
     public Long getId() {
